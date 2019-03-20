@@ -6,20 +6,16 @@
 
 <script>
   import Stock from './Stock.vue'
+  import {mapState} from 'vuex'
 
   export default {
-    data() {
-      return {
-        stocks: [
-          { id: 1, name: 'glasses', price: 190 },
-          { id: 2, name: 'phone', price: 1100 },
-          { id: 3, name: 'watch', price: 610 },
-          { id: 4, name: 'tablet', price: 10 },
-        ]
-      }
-    },
     components: {
       Stock
     },
+    computed: {
+      ...mapState ({
+        stocks: state => state.stocks
+      }),
+    }
   }
 </script>
