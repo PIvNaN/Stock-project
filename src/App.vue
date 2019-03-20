@@ -20,5 +20,9 @@
 </script>
 
 <style>
-
+  .btn.disabled,
+  .btn[disabled],
+  fieldset[disabled] .btn {
+    cursor: default
+  }
 </style>

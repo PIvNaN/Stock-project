@@ -15,10 +15,10 @@
             v-model="quantity">
         </div>
         <div class="pull-right">
-            <button 
+            <button
               class="btn btn-success"
               @click="buyStock"
-              :disabled="quantity <= 0 || !Number.isInteger(quantity)"
+              :disabled="quantity <= 0 || !Number.isInteger(Number(quantity))"
               >Buy</button>
         </div>
       </div>
@@ -42,7 +42,7 @@
         const order = {
           stockId: this.stock.id,
           stockPrice: this.stock.price,
-          quantity: this.quantity
+          quantity: Number(this.quantity)
         };
         console.error('order', order)
         this.quantity = 0
