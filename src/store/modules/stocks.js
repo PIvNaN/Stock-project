@@ -4,9 +4,15 @@ const state = {
   stocks: []
 };
 
+const getters = {
+  stocks: state => {
+    return state.stocks;
+  }
+};
+
 const mutations = {
   SET_STOCKS(state, value) {
-    state.stocks = value;
+    return state.stocks = value;
   },
   RANDOM_STOCKS(state) {
 
@@ -27,6 +33,7 @@ const actions = {
 
 export default {
   state,
+  getters,
   mutations,
   actions
-}
+};

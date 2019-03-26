@@ -6,16 +6,15 @@
 
 <script>
   import Stock from './Stock.vue'
-  import {mapState} from 'vuex'
 
   export default {
     components: {
       Stock
     },
     computed: {
-      ...mapState ({
-        stocks: state => state.stocks
-      }),
+      stocks() {
+        return this.$store.getters.stocks;
+      }
     }
   }
 </script>
