@@ -34,9 +34,6 @@
         quantity: 0
       }
     },
-    created()  {
-      console.error('stock', this.stock)
-    },
     methods: {
       buyStock() {
         const order = {
