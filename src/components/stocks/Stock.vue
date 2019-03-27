@@ -41,8 +41,8 @@
           stockPrice: this.stock.price,
           quantity: Number(this.quantity)
         };
-        console.error('order', order)
-        this.quantity = 0
+        this.$store.dispatch('buyStock', order)
+        this.quantity = 0;
       }
     }
   }
